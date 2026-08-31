@@ -10,53 +10,48 @@
 
 <body>
     <header>
-        <table width="100%" border="0">
-            <tr>
-                <td width="20%" align="center">
-                    <img id="picture" src="images/picture.jpg" alt="Profile Picture" width="150" height="150">
-                </td>
-                <td width="80%">
-                    <h1>Thristan Jericho Tolentino</h1>
-                    <p><b>Infrastructure Administrator / Full Stack Developer</b></p>
-                    <p>
-                        Email: tj@tolentino.email | Phone: (905) 808-8301<br>
-                        Location: Manila, Philippines | LinkedIn: <a
-                            href="https://linkedin.com/in/thristanjericho/">linkedin.com/in/thristanjericho/</a>
-                    </p>
-                    <p>
-                    <nav aria-label="Main Navigation">
-                        <a href="#about">About</a>
-                        <a href="#skills">Skills</a>
-                        <a href="#projects">Projects</a>
-                        <a href="#contact">Contact</a>
-                    </nav>
-                    </p>
-                </td>
-            </tr>
-        </table>
-
+        <div>
+            <img id="picture" src="images/picture.jpg" alt="Profile Picture" width="150" height="150">
+        </div>
+        <div>
+            <h1 id="myname">Thristan Jericho Tolentino</h1>
+            <p><b>Infrastructure Administrator / Full Stack Developer</b></p>
+            <p>
+                Email: <a href="mailto:tj@tolentino.email">tj@tolentino.email</a> | Phone: (905) 808-8301<br>
+                Location: Manila, Philippines | LinkedIn: <a
+                    href="https://linkedin.com/in/thristanjericho/">linkedin.com/in/thristanjericho/</a>
+            </p>
+            <p>
+            <nav aria-label="Main Navigation">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            </p>
+        </div>
     </header>
 
     <main>
         <section id="about">
-            <h3>About Me:</h3>
+            <h3>ABOUT ME</h3>
             <p>Quisquam voluptatibus et ducimus mollitia,
                 aspernatur, laudantium nemo, dolore illo totam vitae dicta soluta. Impedit vel ducimus, pariatur
                 mollitia sapiente veniam voluptate?</p>
-            <p>Quisquam voluptatibus et ducimus mollitia,
-                aspernatur, laudantium nemo, dolore illo totam vitae dicta soluta. Impedit vel ducimus, pariatur
-                mollitia sapiente veniam voluptate?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, fugit tempore qui cum ex nostrum minima
+                sit placeat, repellendus maiores labore sapiente. Facere assumenda eum dolores iusto iste adipisci
+                voluptas?</p>
         </section>
 
         <section id="skills">
-            <h3>My Skills:</h3>
+            <h3>MY SKILLS</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio repellat, aperiam dolorem numquam nostrum
                 provident ullam modi dignissimos eaque reiciendis qui. Voluptas nemo quod ea iusto eaque eos quam vero.
             </p>
         </section>
 
         <section id="projects">
-            <h3>Projects I've Worked On:</h3>
+            <h3>PROJECTS I'VE WORKED ON</h3>
             <ul>
                 <li>Mollitia ad sapiente doloremque obcaecati deleniti suscipit reprehenderit perspiciatis. Consequuntur
                     quia vel, pariatur ratione perferendis, exercitationem ea libero, ipsa repudiandae dicta ullam!</li>
@@ -76,10 +71,17 @@
         </section>
 
         <section id="contact">
-            <h3>Contact Form:</h3>
+            <h3>CONTACT FORM</h3>
             <form>
+                <label for="sender-name">Name</label>
+                <input name="sender-name" id="sender-name" type="text" placeholder="Your full name here" />
+                <br />
+                <label for="sender-email">Email</label>
+                <input name="sender-email" id="sender-email" type="email" placeholder="email@domain.com" />
+                <br />
                 <label for="message">Leave a message:</label><br />
-                <textarea name="message" id="message" rows="10" cols="40"></textarea><br />
+                <textarea name="message" id="message" rows="10" cols="40"></textarea>
+                <br />
                 <button>Submit</button>
             </form>
         </section>

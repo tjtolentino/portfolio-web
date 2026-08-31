@@ -12,16 +12,29 @@ header {
     background-color: white;
     width: 100%;
     top: 0px;
-    padding: 10px;
+    padding: 0px 10px;
+}
+
+header div {
+    display: inline-block;
+}
+
+#myname {
+    font-weight: bolder;
+    position: relative;
+    top: 15px;
 }
 
 #picture {
-    padding: 8px
+    padding: 8px;
+    border-radius: 90px;
 }
 
 nav a {
     padding: 3px 8px;
     margin-right: 10px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 nav a:hover {
@@ -36,12 +49,19 @@ main {
 main section {
     padding: 10px;
     margin-bottom: 30px;
+    scroll-margin-top: 180px;
+}
+
+main section> :not(h3) {
+    padding: 10px 50px;
+    line-height: 1.5em;
 }
 
 main section h3 {
     background-color: darkred;
     color: white;
-    padding: 4px;
+    padding: 4px 20px;
+    border-radius: 5px;
 }
 
 #projects li {
