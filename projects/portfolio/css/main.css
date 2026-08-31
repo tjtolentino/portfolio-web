@@ -1,0 +1,49 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+header {
+    position: sticky;
+    background-color: white;
+    width: 100%;
+    top: 0px;
+    padding: 10px;
+}
+
+#picture {
+    padding: 8px
+}
+
+nav a {
+    padding: 3px 8px;
+    margin-right: 10px;
+}
+
+nav a:hover {
+    background-color: darkred;
+    color: white;
+}
+
+main {
+    scroll-margin-top: 170px;
+}
+
+main section {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+main section h3 {
+    background-color: darkred;
+    color: white;
+    padding: 4px;
+}
+
+#projects li {
+    margin-bottom: 10px;
+}
