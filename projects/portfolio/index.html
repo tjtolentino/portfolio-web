@@ -13,12 +13,12 @@
         <div>
             <img id="picture" src="images/picture.jpg" alt="Profile Picture" width="150" height="150">
         </div>
-        <div>
+        <div id="myinfo">
             <h1 id="myname">Thristan Jericho Tolentino</h1>
             <p><b>Infrastructure Administrator / Full Stack Developer</b></p>
             <p>
                 Email: <a href="mailto:tj@tolentino.email">tj@tolentino.email</a> | Phone: (905) 808-8301<br>
-                Location: Manila, Philippines | LinkedIn: <a
+                Location: Quezon City, Philippines | LinkedIn: <a
                     href="https://linkedin.com/in/thristanjericho/">linkedin.com/in/thristanjericho/</a>
             </p>
             <p>
@@ -35,19 +35,23 @@
     <main>
         <section id="about">
             <h3>ABOUT ME</h3>
-            <p>Quisquam voluptatibus et ducimus mollitia,
-                aspernatur, laudantium nemo, dolore illo totam vitae dicta soluta. Impedit vel ducimus, pariatur
-                mollitia sapiente veniam voluptate?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, fugit tempore qui cum ex nostrum minima
-                sit placeat, repellendus maiores labore sapiente. Facere assumenda eum dolores iusto iste adipisci
-                voluptas?</p>
+            <p>Aspiring Full Stack Developer with a solid foundation in modern front-end interfaces and scalable
+                back-end architectures. Driven by clean code, intuitive design, and efficient problem-solving, with
+                hands-on experience building end-to-end web applications. Constantly learning modern frameworks, API
+                development, and database management to deliver robust digital solutions.</p>
         </section>
 
         <section id="skills">
             <h3>MY SKILLS</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio repellat, aperiam dolorem numquam nostrum
-                provident ullam modi dignissimos eaque reiciendis qui. Voluptas nemo quod ea iusto eaque eos quam vero.
-            </p>
+            <ul id="skills-grid">
+                <li>Semantic HTML</li>
+                <li>CSS and Responsive Layouts</li>
+                <li>Javascript Fundamentals</li>
+                <li>Git and Github Workflows</li>
+                <li>Azure Cloud Administration</li>
+                <li>Terraform</li>
+                <li>Database</li>
+            </ul>
         </section>
 
         <section id="projects">
@@ -73,15 +77,18 @@
         <section id="contact">
             <h3>CONTACT FORM</h3>
             <form>
-                <label for="sender-name">Name</label>
-                <input name="sender-name" id="sender-name" type="text" placeholder="Your full name here" />
-                <br />
-                <label for="sender-email">Email</label>
-                <input name="sender-email" id="sender-email" type="email" placeholder="email@domain.com" />
-                <br />
-                <label for="message">Leave a message:</label><br />
-                <textarea name="message" id="message" rows="10" cols="40"></textarea>
-                <br />
+                <p>
+                    <label for="sender-name">Name</label>
+                    <input name="sender-name" id="sender-name" type="text" placeholder="Your full name here" />
+                </p>
+                <p>
+                    <label for="sender-email">Email</label>
+                    <input name="sender-email" id="sender-email" type="email" placeholder="email@domain.com" />
+                </p>
+                <p>
+                    <label for="message">Leave a message:</label><br />
+                    <textarea name="message" id="message" rows="10" cols="40"></textarea>
+                </p>
                 <button>Submit</button>
             </form>
         </section>

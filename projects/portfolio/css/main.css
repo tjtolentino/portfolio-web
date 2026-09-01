@@ -1,5 +1,8 @@
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 html {
@@ -7,12 +10,18 @@ html {
     box-sizing: border-box;
 }
 
+/* 
+---------------------------------------------- HEADER
+*/
+
 header {
     position: sticky;
     background-color: white;
     width: 100%;
     top: 0px;
-    padding: 0px 10px;
+    padding: 10px 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 99;
 }
 
 header div {
@@ -22,34 +31,61 @@ header div {
 #myname {
     font-weight: bolder;
     position: relative;
-    top: 15px;
+    /* top: 15px; */
+}
+
+#myinfo {
+    /* background-color: yellow; */
+    position: relative;
+    top: -20px;
+    margin-left: 30px;
 }
 
 #picture {
     padding: 8px;
     border-radius: 90px;
+    margin-left: 20px;
+}
+
+/* 
+---------------------------------------------- NAVIGATION
+*/
+
+nav {
+    margin-top: 20px;
+    background-color: lightgrey;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 8px;
 }
 
 nav a {
     padding: 3px 8px;
-    margin-right: 10px;
+    margin: 0px 20px;
     border-radius: 5px;
     text-decoration: none;
+
+    color: black;
 }
 
 nav a:hover {
-    background-color: darkred;
+    background-color: #050505de;
     color: white;
+    height: max-content;
 }
 
+/* 
+---------------------------------------------- MAIN
+*/
+
 main {
-    scroll-margin-top: 170px;
+    width: 100%;
 }
 
 main section {
     padding: 10px;
     margin-bottom: 30px;
-    scroll-margin-top: 180px;
+    scroll-margin-top: 200px;
 }
 
 main section> :not(h3) {
@@ -58,12 +94,103 @@ main section> :not(h3) {
 }
 
 main section h3 {
-    background-color: darkred;
+    background-color: #050505de;
     color: white;
     padding: 4px 20px;
     border-radius: 5px;
+    /* box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); */
+}
+
+/* 
+---------------------------------------------- MAIN > PROJECTS
+*/
+
+#about,
+#projects {
+    /* background-color: rgba(211, 211, 211, 0.322); */
 }
 
 #projects li {
     margin-bottom: 10px;
+
+}
+
+/* 
+---------------------------------------------- MAIN > SKILLS
+*/
+
+#skills-grid {
+    display: flex;
+    min-height: 50px;
+    width: auto;
+    list-style: none;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 1em;
+    grid-auto-flow: column;
+    margin-top: 20px;
+    transform: translateY(-3px);
+    flex-wrap: wrap;
+}
+
+#skills-grid li {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.268);
+    border-radius: 5px;
+    border-color: red;
+
+    min-width: 180px;
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+/* 
+---------------------------------------------- MAIN > CONTACTS
+*/
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#contact form {
+    max-width: 480px;
+}
+
+#contact label {
+    font-weight: 600;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background-color: white;
+    font: inherit;
+}
+
+#contact button {
+    display: inline-block;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 20px;
+    background-color: darkred;
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+#contact button:hover,
+#contact button:focus {
+    background-color: #1d4ed8;
 }
