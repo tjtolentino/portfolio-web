@@ -124,7 +124,6 @@ main section h3 {
     min-height: 50px;
     width: auto;
     list-style: none;
-    /* align-items: center; */
     justify-content: center;
     gap: 1em;
     grid-auto-flow: column;
@@ -134,7 +133,7 @@ main section h3 {
 }
 
 #skills-grid li {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.268);
+    box-shadow: 0 2px 12px 3px rgba(0, 0, 0, 0.145);
     border-radius: 5px;
     border-color: red;
 
@@ -146,6 +145,13 @@ main section h3 {
     justify-content: center;
 
     padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform;
+
+}
+
+#skills-grid li:hover {
+    transform: translateY(-4px);
 }
 
 /* 
