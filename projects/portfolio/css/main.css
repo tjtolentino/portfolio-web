@@ -8,6 +8,7 @@
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 /* 
@@ -18,10 +19,11 @@ header {
     position: sticky;
     background-color: white;
     width: 100%;
-    top: 0px;
-    padding: 10px 10px;
+    top: 0;
+    padding: 1rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     z-index: 99;
+    /* line-height: 1; */
 }
 
 header div {
@@ -31,20 +33,19 @@ header div {
 #myname {
     font-weight: bolder;
     position: relative;
-    /* top: 15px; */
 }
 
 #myinfo {
     /* background-color: yellow; */
     position: relative;
-    top: -20px;
-    margin-left: 30px;
+    top: -1.2rem;
+    margin-left: 2rem;
 }
 
 #picture {
-    padding: 8px;
+    padding: .5rem;
     border-radius: 90px;
-    margin-left: 20px;
+    margin-left: 1rem;
 }
 
 /* 
@@ -52,26 +53,26 @@ header div {
 */
 
 nav {
-    margin-top: 20px;
+    margin-top: 1rem;
     background-color: lightgrey;
     width: fit-content;
-    padding: 8px;
-    border-radius: 8px;
+    padding: .5rem;
+    border-radius: 1rem;
 }
 
 nav a {
-    padding: 3px 8px;
-    margin: 0px 20px;
+    padding: .5rem;
+    margin: 0 1rem;
     border-radius: 5px;
     text-decoration: none;
-
+    border-radius: 1rem;
     color: black;
 }
 
 nav a:hover {
-    background-color: #050505de;
+    background-color: darkred;
     color: white;
-    height: max-content;
+    /* height: max-content; */
 }
 
 /* 
@@ -79,26 +80,30 @@ nav a:hover {
 */
 
 main {
-    width: 100%;
+    /* width: auto; */
 }
 
 main section {
-    padding: 10px;
-    margin-bottom: 30px;
-    scroll-margin-top: 200px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    scroll-margin-top: 13rem;
 }
 
 main section> :not(h3) {
-    padding: 10px 50px;
-    line-height: 1.5em;
+    padding: 1rem 3rem;
+    /* line-height: 1.5em; */
 }
 
 main section h3 {
     background-color: #050505de;
     color: white;
-    padding: 4px 20px;
+    padding: .5rem 1rem;
     border-radius: 5px;
     /* box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); */
+}
+
+main p {
+    line-height: 2;
 }
 
 /* 
@@ -111,7 +116,7 @@ main section h3 {
 }
 
 #projects li {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 
 }
 
@@ -121,30 +126,30 @@ main section h3 {
 
 #skills-grid {
     display: flex;
-    min-height: 50px;
+    /* min-height: 3rem; */
     width: auto;
     list-style: none;
     justify-content: center;
-    gap: 1em;
+    gap: 2rem;
     grid-auto-flow: column;
-    margin-top: 20px;
+    margin-top: 1rem;
     transform: translateY(-3px);
     flex-wrap: wrap;
 }
 
 #skills-grid li {
     box-shadow: 0 2px 12px 3px rgba(0, 0, 0, 0.145);
-    border-radius: 5px;
+    border-radius: 1rem;
     border-color: red;
 
-    min-width: 180px;
-    min-height: 80px;
+    min-width: 12rem;
+    min-height: 5rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 20px;
+    padding: 1rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     will-change: transform;
 
@@ -161,39 +166,45 @@ main section h3 {
 #contact {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
+}
+
+#contact p {
+    line-height: 1;
 }
 
 #contact form {
-    max-width: 480px;
+    max-width: 30rem;
 }
 
 #contact label {
-    font-weight: 600;
+    /* font-weight: 600; */
+    /* margin-top: .5rem; */
 }
 
 #contact input,
 #contact textarea {
     width: 100%;
-    padding: 12px 14px;
+    padding: .8rem;
     border: 1px solid #d1d5db;
-    border-radius: 10px;
+    border-radius: .5rem;
     background-color: white;
     font: inherit;
+    margin-bottom: 1rem;
 }
 
 #contact button {
     display: inline-block;
     border: none;
-    border-radius: 999px;
-    padding: 12px 20px;
+    border-radius: 90px;
+    padding: .5rem 1rem;
     background-color: darkred;
     color: white;
     font: inherit;
-    font-weight: 700;
+    /* font-weight: 700; */
     text-decoration: none;
     cursor: pointer;
-    margin-top: 8px;
+    margin-top: .5rem;
 }
 
 #contact button:hover,
