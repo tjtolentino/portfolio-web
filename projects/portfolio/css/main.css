@@ -9,6 +9,7 @@ html {
     scroll-behavior: smooth;
     box-sizing: border-box;
     font-size: 16px;
+    background-color: rgb(239, 239, 239);
 }
 
 /* 
@@ -18,12 +19,12 @@ html {
 header {
     position: sticky;
     background-color: white;
-    width: 100%;
     top: 0;
-    padding: 1rem;
+    padding: .5rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     z-index: 99;
-    /* line-height: 1; */
+    display: flex;
+    justify-content: center;
 }
 
 header div {
@@ -38,14 +39,29 @@ header div {
 #myinfo {
     /* background-color: yellow; */
     position: relative;
-    top: -1.2rem;
+    top: 1.5rem;
     margin-left: 2rem;
+    text-align: center;
+}
+
+#mycontacts {
+    position: relative;
+    top: 1rem;
+    left: 3rem;
+}
+
+#mycontacts ul {
+    list-style: none;
+}
+
+#mycontacts ul li {
+    margin: .5rem;
 }
 
 #picture {
     padding: .5rem;
     border-radius: 90px;
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 /* 
@@ -80,13 +96,24 @@ nav a:hover {
 */
 
 main {
-    /* width: auto; */
+    /* min-width: 190rem; */
+    /* background-color: pink; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 main section {
+    max-width: 90rem;
     padding: 1rem;
     margin-bottom: 2rem;
-    scroll-margin-top: 13rem;
+    scroll-margin-top: 12rem;
+    background-color: white;
+    margin: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 2px 12px 3px rgba(0, 0, 0, 0.145);
 }
 
 main section> :not(h3) {
@@ -130,7 +157,7 @@ main p {
     width: auto;
     list-style: none;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     grid-auto-flow: column;
     margin-top: 1rem;
     transform: translateY(-3px);
@@ -138,11 +165,12 @@ main p {
 }
 
 #skills-grid li {
-    box-shadow: 0 2px 12px 3px rgba(0, 0, 0, 0.145);
+    box-shadow: 0 2px 12px 3px rgba(0, 0, 0, 0.038);
     border-radius: 1rem;
     border-color: red;
 
-    min-width: 12rem;
+    min-width: 8rem;
+    /* max-width: 15rem; */
     min-height: 5rem;
 
     display: flex;
