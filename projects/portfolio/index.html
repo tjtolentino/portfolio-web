@@ -5,157 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thristan Tolentino</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
 
 </head>
 
-<body>
-    <header class="sticky-top bg-white border-bottom shadow-sm p-3">
+<body class="max-w-full font-serif bg-gray-400 justify-center-safe">
+
+    <header class="max-w-full sticky top-0 shadow-xl p-4 z-99">
 
         <!-- Desktop -->
-        <div class="container-fluid d-flex flex-column flex-lg-row align-items-center justify-content-center gap-1">
+        <div class="flex flex-row justify-center-safe">
 
             <!-- Picture  -->
-            <div class="mypicture">
-                <img class="mypicture__id rounded-circle" src="images/picture.jpg" alt="Profile Picture">
+            <div>
+                <img class="rounded-full size-32" src="images/picture.jpg" alt="Profile Picture">
             </div>
 
             <!-- Name and Position -->
-            <div class="text-center text-lg-start gap-3">
+            <div class="relative top-2 mx-8 flex flex-col justify-items-center-safe gap-3">
 
-                <h1>Thristan Jericho Tolentino</h1>
-                <p class="text-muted mb-0 text-center">Infrastructure Administrator / Full Stack Developer</p>
+                <!-- name plate -->
+                <h1 class="w-full align-text-center font-bold text-4xl">Thristan <span>Jericho</span> Tolentino</h1>
+                <p class="relative -top-2 text-center">Infrastructure Administrator / Full Stack Developer</p>
 
-                <!-- Navigation -->
-                <nav class="d-flex gap-2 text-bg-dark" aria-label="Main Navigation">
-                    <a class="btn text-light btn-sm" href="#about">About</a>
-                    <a class="btn text-light btn-sm" href="#skills">Skills</a>
-                    <a class="btn text-light btn-sm" href="#projects">Projects</a>
-                    <a class="btn text-light btn-sm" href="#contact">Contact</a>
+                <!-- navigation -->
+                <nav class="flex justify-center-safe top-5 list-none w-full justify-items-center-safe" aria-label="Main Navigation">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
                 </nav>
 
             </div>
 
             <!-- Contacts -->
-            <div class="d-flex flex-wrap justify-content-center gap-3 small text-secondary">
-
-                <ul class="list-unstyled">
-                    <li><i class="fa-solid fa-envelope"></i> <a href="mailto:tj@tolenti.email">tj@tolentino.email</a>
-                    </li>
+            <div>
+                <ul class="flex flex-col relative top-2">
+                    <li><i class="fa-solid fa-envelope"></i> <a href="mailto:tj@tolenti.email">tj@tolentino.email</a></li>
                     <li><i class="fa-solid fa-phone"></i> (905) 808-8301</li>
                     <li><i class="fa-solid fa-house"></i> Quezon City, Philippines</li>
                     <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/thristanjericho/">@thristanjericho/</a></li>
                     <li><i class="fa-brands fa-github"></i> <a href="https://github.com/tjtolentino">@tjtolentino</a>
                     </li>
                 </ul>
-
             </div>
 
     </header>
 
-    <main class="">
-        <div class="container-fluid">
-            <section class="card border-0" id="about">
-                <h3 class="card-header bg-dark text-light">ABOUT ME</h3>
-                <div class="card-body">
-                    <p>Aspiring Full Stack Developer with a solid foundation in modern front-end interfaces and scalable
-                        back-end architectures. Driven by clean code, intuitive design, and efficient problem-solving,
-                        with
-                        hands-on experience building end-to-end web applications. Constantly learning modern frameworks,
-                        API
-                        development, and database management to deliver robust digital solutions.</p>
-                </div>
+    <main class="grid grid-flow-row max-w-full justify-center-safe [&_h3]:text-gray-800 [&_h3]:text-shadow-lg">
 
-            </section>
+        <section id="about">
+            <h3>ABOUT ME</h3>
+            <div class="section__content">
+                <p>Aspiring Full Stack Developer with a solid foundation in modern front-end interfaces and scalable
+                    back-end architectures. Driven by clean code, intuitive design, and efficient problem-solving,
+                    with hands-on experience building end-to-end web applications. Constantly learning modern frameworks,
+                    API development, and database management to deliver robust digital solutions.
+                </p>
+            </div>
+        </section>
 
-            <section class="card border-0" id="skills">
-                <h3 class="card-header bg-dark text-light">MY SKILLS</h3>
-                <div class="card-body">
-                    <ul class="skills-grid" class="col-sm-8 col-lg-4">
-                        <li>Semantic HTML</li>
-                        <li>CSS and Responsive Layouts</li>
-                        <li>Javascript</li>
-                        <li>Git and Github Workflows</li>
-                        <li>Cloud Administration & Engineering</li>
-                        <li>DevOps</li>
-                        <li>Database</li>
-                        <li>Windows and Linux Servers</li>
-                        <li>Powershell</li>
-                        <li>C#</li>
-                    </ul>
-                </div>
-            </section>
+        <section id="skills">
+            <h3>MY SKILLS</h3>
+            <div class="section__content">
+                <ul class="skills-grid grid grid-cols-3 gap-6 justify-center-safe [&>li]:p-4 [&>li]:rounded-xl [&>li]:shadow-md [&>li]:text-center [&>li]:outline-1 [&>li]:outline-gray-200">
+                    <li>Semantic HTML</li>
+                    <li>CSS and Responsive Layouts</li>
+                    <li>Javascript</li>
+                    <li>Git and Github Workflows</li>
+                    <li>Cloud Administration & Engineering</li>
+                    <li>DevOps</li>
+                    <li>Database</li>
+                    <li>Windows and Linux Servers</li>
+                    <li>Powershell</li>
+                    <li>C#</li>
+                </ul>
+            </div>
+        </section>
 
-            <section class="card border-0" id="projects">
-                <h3 class="card-header bg-dark text-light">PROJECTS I'VE WORKED ON</h3>
-                <div class="card-body">
-                    <ul>
-                        <li>
-                            <p>Mollitia ad sapiente doloremque obcaecati deleniti suscipit reprehenderit perspiciatis.
-                                Consequuntur
-                                quia vel, pariatur ratione perferendis, exercitationem ea libero, ipsa repudiandae dicta
-                                ullam!
-                            </p>
-                        </li>
-                        <li>
-                            <p>Esse iure ipsum consequatur quam! Labore alias tempora optio, consequatur deserunt
-                                quisquam
-                                dolores
-                                accusamus perferendis provident debitis!
-                                Harum aut voluptas quibusdam sit?</p>
-                        </li>
-                        <li>
-                            <p>Natus, sequi dignissimos non sed eos sitillo sunt sint amet, provident error magnam optio
-                                inventore
-                                eligendi illum quae quis a obcaecati?</p>
-                        </li>
-                        <li>
-                            <p>Mollitia ad sapiente doloremque obcaecati deleniti suscipit reprehenderit perspiciatis.
-                                Consequuntur
-                                quia vel, pariatur ratione perferendis, exercitationem ea libero, ipsa repudiandae dicta
-                                ullam!
-                            </p>
-                        </li>
-                        <li>
-                            <p>Esse iure ipsum consequatur quam! Labore alias tempora optio, consequatur deserunt
-                                quisquam
-                                dolores
-                                accusamus perferendis provident debitis!
-                                Harum aut voluptas quibusdam sit?</p>
-                        </li>
-                        <li>
-                            <p>Natus, sequi dignissimos non sed eos sitillo sunt sint amet, provident error magnam optio
-                                inventore
-                                eligendi illum quae quis a obcaecati?</p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="card border-0" id="contact">
-                <h3 class="card-header bg-dark text-light">CONTACT ME</h3>
-                <div class="card-body col-lg-5">
-                    <form>
-                        <p>
-                            <label class="form-label" for="sender-name">Name</label>
-                            <input class="form-control" name="sender-name" id="sender-name" type="text" placeholder="Your full name here" />
+        <section id="projects">
+            <h3>PROJECTS I'VE WORKED ON</h3>
+            <div class="section__content">
+                <ul class="[&>li]:list-disc">
+                    <li>
+                        <p>Mollitia ad sapiente doloremque obcaecati deleniti suscipit reprehenderit perspiciatis.
+                            Consequuntur
+                            quia vel, pariatur ratione perferendis, exercitationem ea libero, ipsa repudiandae dicta
+                            ullam!
                         </p>
-                        <p>
-                            <label class="form-label" for="sender-email">Email</label>
-                            <input class="form-control" name="sender-email" id="sender-email" type="email" placeholder="email@domain.com" />
+                    </li>
+                    <li>
+                        <p>Esse iure ipsum consequatur quam! Labore alias tempora optio, consequatur deserunt
+                            quisquam
+                            dolores
+                            accusamus perferendis provident debitis!
+                            Harum aut voluptas quibusdam sit?</p>
+                    </li>
+                    <li>
+                        <p>Natus, sequi dignissimos non sed eos sitillo sunt sint amet, provident error magnam optio
+                            inventore
+                            eligendi illum quae quis a obcaecati?</p>
+                    </li>
+                    <li>
+                        <p>Mollitia ad sapiente doloremque obcaecati deleniti suscipit reprehenderit perspiciatis.
+                            Consequuntur
+                            quia vel, pariatur ratione perferendis, exercitationem ea libero, ipsa repudiandae dicta
+                            ullam!
                         </p>
-                        <p>
-                            <label class="form-label" for="message">Leave a message:</label><br />
-                            <textarea class="form-control" name="message" id="message" rows="10" cols="40"></textarea>
-                        </p>
-                        <button class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </section>
-        </div>
+                    </li>
+                    <li>
+                        <p>Esse iure ipsum consequatur quam! Labore alias tempora optio, consequatur deserunt
+                            quisquam
+                            dolores
+                            accusamus perferendis provident debitis!
+                            Harum aut voluptas quibusdam sit?</p>
+                    </li>
+                    <li>
+                        <p>Natus, sequi dignissimos non sed eos sitillo sunt sint amet, provident error magnam optio
+                            inventore
+                            eligendi illum quae quis a obcaecati?</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h3>CONTACT ME</h3>
+            <div class="section__content">
+                <form>
+                    <p>
+                        <label for="sender-name">Name</label>
+                        <input name="sender-name" id="sender-name" type="text" placeholder="Your full name here" />
+                    </p>
+                    <p>
+                        <label for="sender-email">Email</label>
+                        <input name="sender-email" id="sender-email" type="email" placeholder="email@domain.com" />
+                    </p>
+                    <p>
+                        <label for="message">Leave a message:</label><br />
+                        <textarea name="message" id="message" rows="10" cols="40"></textarea>
+                    </p>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </section>
+
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
