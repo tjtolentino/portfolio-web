@@ -1,10 +1,10 @@
 :root {
     --dark-gray: #050505de;
-    --gray: oklch(70.7% 0.022 261.325);
+    --gray: oklch(60.179% 0.0215 262.987);
 }
 
 html {
-    scroll-padding-top: 7rem;
+    scroll-padding-top: 7.5rem;
 }
 
 body a {
@@ -17,7 +17,7 @@ body a {
 
 header {
     background-color: white;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.701);
     backdrop-filter: blur(12px);
 }
 
@@ -51,34 +51,50 @@ nav a:hover {
 ---------------------------------------------- MAIN
 */
 
-
 main section {
-    max-width: 70rem;
-    /* scroll-margin-top: 320rem; */
-    margin: 0 1rem 1rem;
+    place-items: center;
+    color: white;
+}
+
+main section:nth-child(even) {
+    /* display: block; */
+    background-color: white;
+    /* width: 100%; */
+}
+
+main section div {
+    display: block;
     position: relative;
+    width: 70rem;
+    /* border: solid 1px red; */
 }
 
 .section__header {
-    font: bold small-caps 2rem Arial;
+    font: bold small-caps 5rem Arial;
     color: white;
-    text-shadow: 0 -1px 8px #0000008d;
-
+    background: transparent;
     position: relative;
-    top: .5rem;
+    top: -1.8rem;
     left: 1rem;
     z-index: 20;
+    width: fit-content;
+}
+
+main section:nth-of-type(even) .section__header {
+    color: var(--gray);
 }
 
 .section__content {
-    padding: 1.5rem 2rem;
-    border-radius: .5rem;
+    display: block;
+    position: relative;
+    padding: 1rem 5rem;
+    /* border: dashed 3px green; */
     border: 0;
-    box-shadow: 0 2px 12px 3px rgba(0, 0, 0, 0.2);
-    background-color: white;
+    /* box-shadow: 0 2px 12px 3px rgba(0, 0, 0, 0.2); */
+    background: transparent;
     line-height: 2;
-    /* position: relative; */
-    z-index: 30;
+    /* z-index: 30; */
+    top: -2rem;
 }
 
 .section__bg {
@@ -114,6 +130,7 @@ main section {
     will-change: transform;
     position: relative;
     background-color: white;
+    color: black;
     z-index: 80;
 
 }
@@ -121,4 +138,18 @@ main section {
 
 .skills-grid li:hover {
     transform: translateY(-4px);
+}
+
+/* 
+---------------------------------------------- MAIN > CONTACTS
+*/
+
+
+#contact form {
+    display: block;
+    /* box-shadow: 0 2px 8px 8px rgba(0, 0, 0, 0.079); */
+}
+
+#contact form * {
+    width: 100%;
 }
