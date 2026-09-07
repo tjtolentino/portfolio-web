@@ -52,6 +52,7 @@ nav a:hover {
 */
 
 main section {
+    display: grid;
     place-items: center;
     color: white;
 }
@@ -62,10 +63,12 @@ main section:nth-child(even) {
     /* width: 100%; */
 }
 
-main section div {
+main section > div {
     display: block;
     position: relative;
     width: 70rem;
+    max-width: 100%;
+    margin-inline: auto;
     /* border: solid 1px red; */
 }
 
