@@ -12,15 +12,14 @@
 
 </head>
 
-<body class="max-w-full font-serif bg-gray-400 justify-center-safe">
+<body class="max-w-full justify-center-safe font-sans bg-[linear-gradient(45deg,theme(colors.gray.400),theme(colors.gray.600))]">
 
     <header class="max-w-full sticky top-0 shadow-xl p-4 z-99">
 
-        <!-- Desktop -->
         <div class="flex flex-row justify-center-safe">
 
             <!-- Picture  -->
-            <div>
+            <div class="hidden md:block">
                 <img class="rounded-full size-32" src="images/picture.jpg" alt="Profile Picture">
             </div>
 
@@ -42,23 +41,22 @@
             </div>
 
             <!-- Contacts -->
-            <div>
-                <ul class="flex flex-col relative top-2">
+            <div class="hidden md:block">
+                <ul class="mycontacts flex flex-col relative top-2">
                     <li><i class="fa-solid fa-envelope"></i> <a href="mailto:tj@tolenti.email">tj@tolentino.email</a></li>
                     <li><i class="fa-solid fa-phone"></i> (905) 808-8301</li>
                     <li><i class="fa-solid fa-house"></i> Quezon City, Philippines</li>
-                    <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/thristanjericho/">@thristanjericho</a></li>
-                    <li><i class="fa-brands fa-github"></i> <a href="https://github.com/tjtolentino">@tjtolentino</a>
-                    </li>
+                    <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/thristanjericho/" class="decoration-dotted">@thristanjericho</a></li>
+                    <li><i class="fa-brands fa-github"></i> <a href="https://github.com/tjtolentino">@tjtolentino</a></li>
                 </ul>
             </div>
 
     </header>
 
-    <main class="grid grid-flow-row max-w-full justify-center-safe">
+    <main class="grid grid-flow-row max-w-full justify-center-safe z-20">
 
         <section id="about">
-            <h3>something about me</h3>
+            <h3 class="section__header">something about me</h3>
             <div class="section__content">
                 <p>Aspiring Full Stack Developer with a solid foundation in modern front-end interfaces and scalable
                     back-end architectures. Driven by clean code, intuitive design, and efficient problem-solving,
@@ -66,10 +64,11 @@
                     API development, and database management to deliver robust digital solutions.
                 </p>
             </div>
+            <h1 class="section__bg">about</h1>
         </section>
 
         <section id="skills">
-            <h3>what i can do</h3>
+            <h3 class="section__header">what i can do</h3>
             <div class="section__content">
                 <ul class="skills-grid grid grid-cols-3 gap-6 justify-center-safe [&>li]:p-4 [&>li]:rounded-xl [&>li]:shadow-md [&>li]:text-center [&>li]:outline-1 [&>li]:outline-gray-200">
                     <li>Semantic HTML</li>
@@ -84,10 +83,11 @@
                     <li>C#</li>
                 </ul>
             </div>
+            <h1 class="section__bg">skills</h1>
         </section>
 
         <section id="projects">
-            <h3>stuffs i have done</h3>
+            <h3 class="section__header">stuffs i have done</h3>
             <div class="section__content">
                 <ul class="[&>li]:list-disc">
                     <li>
@@ -130,10 +130,11 @@
                     </li>
                 </ul>
             </div>
+            <h1 class="section__bg">projects</h1>
         </section>
 
         <section id="contact">
-            <h3>keep in touch</h3>
+            <h3 class="section__header">keep in touch</h3>
             <div class="section__content">
 
                 <form action="#" method="POST" class="space-y-4 max-w-md">
@@ -163,6 +164,7 @@
                     </button>
                 </form>
             </div>
+            <h1 class="section__bg">contact</h1>
         </section>
 
     </main>

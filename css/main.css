@@ -3,26 +3,27 @@
     --gray: oklch(70.7% 0.022 261.325);
 }
 
+html {
+    scroll-padding-top: 7rem;
+}
+
+body a {
+    text-decoration: dashed;
+}
+
 /* 
 ---------------------------------------------- HEADER
 */
 
 header {
     background-color: white;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
 }
 
-.myname {}
-
-.mytitle {}
-
-.mypicture {}
-
-.mypicture__id {
-    /* width: 150px; */
+.mycontacts a {
+    text-decoration-style: dotted;
 }
-
-
-
 
 /* 
 ---------------------------------------------- NAVIGATION
@@ -53,29 +54,48 @@ nav a:hover {
 
 main section {
     max-width: 70rem;
-    scroll-margin-top: 20rem;
-    background-color: transparent;
+    /* scroll-margin-top: 320rem; */
     margin: 0 1rem 1rem;
+    position: relative;
 }
 
-main section h3 {
+.section__header {
     font: bold small-caps 2rem Arial;
     color: white;
-    text-shadow: 0 -1px 8px #0000007d;
+    text-shadow: 0 -1px 8px #0000008d;
 
     position: relative;
-    top: .4rem;
+    top: .5rem;
     left: 1rem;
+    z-index: 20;
 }
 
 .section__content {
     padding: 1.5rem 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 2px 12px 3px rgba(0, 0, 0, 0.145);
+    border-radius: .5rem;
+    border: 0;
+    box-shadow: 0 2px 12px 3px rgba(0, 0, 0, 0.2);
     background-color: white;
     line-height: 2;
+    /* position: relative; */
+    z-index: 30;
 }
 
+.section__bg {
+    position: relative;
+    /* border: solid 1px; */
+    width: fit-content;
+
+    z-index: 50;
+    position: absolute;
+    bottom: 0;
+    right: 2rem;
+
+    font: 300 8rem "Helvetica Neue", Arial, sans-serif;
+
+    color: transparent;
+    text-shadow: 0 0 10px rgba(197, 196, 196, 0.301);
+}
 
 
 
@@ -92,6 +112,9 @@ main section h3 {
 
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     will-change: transform;
+    position: relative;
+    background-color: white;
+    z-index: 80;
 
 }
 
