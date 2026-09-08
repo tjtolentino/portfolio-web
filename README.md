@@ -1,4 +1,4 @@
-# Thristan "TJ" Jericho Tolentino — Portfolio Website
+# Thristan Jericho Tolentino — Portfolio Website
 
 [![Runtime](https://img.shields.io/badge/Runtime-Bun%20v1.4+-black?logo=bun)](https://bun.com)
 [![Styling](https://img.shields.io/badge/Styling-SCSS%20%2B%20Tailwind%20CSS-blue?logo=sass)](https://sass-lang.com)
