@@ -1,0 +1,136 @@
+:root {
+    --dark-gray: #050505de;
+    --gray: oklch(60.179% 0.0215 262.987);
+}
+
+html {
+    scroll-padding-top: 7.5rem;
+}
+
+body a {
+    text-decoration: underline dashed;
+}
+
+/* 
+---------------------------------------------- HEADER
+*/
+
+header {
+    background-color: white;
+    background: rgba(255, 255, 255, 0.701);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    z-index: 99;
+}
+
+.mycontacts a {
+    text-decoration-style: dotted;
+}
+
+/* 
+---------------------------------------------- NAVIGATION
+*/
+
+nav {
+    border-radius: 1rem;
+    background-color: var(--dark-gray);
+    color: white;
+}
+
+nav a {
+    margin: 0 2rem;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    background-color: darkred;
+    color: white;
+}
+
+/* 
+---------------------------------------------- MAIN
+*/
+
+main section {
+    display: grid;
+    place-items: center;
+    color: white;
+}
+
+main section:nth-child(even) {
+    background-color: white;
+}
+
+main section > div {
+    display: block;
+    position: relative;
+    width: 70rem;
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+.section__header {
+    font: bold small-caps 5rem Arial;
+    color: white;
+    background: transparent;
+    position: relative;
+    top: -1.8rem;
+    left: 1rem;
+    z-index: 20;
+    width: fit-content;
+}
+
+main section:nth-child(even) .section__header {
+    color: var(--gray);
+}
+
+.section__content {
+    display: block;
+    position: relative;
+    padding: 1rem 5rem;
+    border: 0;
+    background: transparent;
+    line-height: 2;
+    top: -2rem;
+}
+
+.section__bg {
+    position: absolute;
+    bottom: 0;
+    right: 2rem;
+    z-index: 50;
+    width: fit-content;
+    font: 300 8rem "Helvetica Neue", Arial, sans-serif;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(197, 196, 196, 0.301);
+}
+
+/* 
+---------------------------------------------- MAIN > SKILLS
+*/
+
+.skills-grid li {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform;
+    position: relative;
+    background-color: white;
+    color: black;
+    z-index: 80;
+}
+
+.skills-grid li:hover {
+    transform: translateY(-4px);
+}
+
+/* 
+---------------------------------------------- MAIN > CONTACTS
+*/
+
+#contact form {
+    display: block;
+}
+
+#contact form * {
+    width: 100%;
+}

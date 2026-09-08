@@ -1,0 +1,14 @@
+:root {
+    --dark-gray: #050505de;
+    --gray: oklch(60.179% 0.0215 262.987);
+}
+
+html {
+    scroll-padding-top: 7.5rem;
+}
+
+body {
+    a {
+        text-decoration: underline dashed;
+    }
+}

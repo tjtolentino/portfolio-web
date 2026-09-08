@@ -1,0 +1,4 @@
+@echo off
+cls
+
+bun x sass --watch scss\main.scss css\main.css --style=compressed

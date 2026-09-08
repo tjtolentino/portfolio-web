@@ -1,0 +1,59 @@
+/* 
+---------------------------------------------- MAIN
+*/
+
+main section {
+    display: grid;
+    place-items: center;
+    color: white;
+
+    &:nth-child(even) {
+        background-color: white;
+    }
+
+    > div {
+        display: block;
+        position: relative;
+        width: 70rem;
+        max-width: 100%;
+        margin-inline: auto;
+    }
+}
+
+.section {
+    &__header {
+        font: bold small-caps 5rem Arial;
+        color: white;
+        background: transparent;
+        position: relative;
+        top: -1.8rem;
+        left: 1rem;
+        z-index: 20;
+        width: fit-content;
+
+        main section:nth-child(even) & {
+            color: var(--gray);
+        }
+    }
+
+    &__content {
+        display: block;
+        position: relative;
+        padding: 1rem 5rem;
+        border: 0;
+        background: transparent;
+        line-height: 2;
+        top: -2rem;
+    }
+
+    &__bg {
+        position: absolute;
+        bottom: 0;
+        right: 2rem;
+        z-index: 50;
+        width: fit-content;
+        font: 300 8rem "Helvetica Neue", Arial, sans-serif;
+        color: transparent;
+        text-shadow: 0 0 10px rgba(197, 196, 196, 0.301);
+    }
+}

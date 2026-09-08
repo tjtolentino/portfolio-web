@@ -1,0 +1,21 @@
+// ==============================================
+// MAIN STYLESHEET
+// ==============================================
+
+// Base & Global styles
+// Thristan Jericho Tolentino
+//
+
+@use "base";
+
+// Header element & Navigation
+@use "header";
+
+// Main Section Layout & Common Components
+@use "sections";
+
+// 4 HTML Sections
+@use "about";
+@use "skills";
+@use "projects";
+@use "contact";

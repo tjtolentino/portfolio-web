@@ -1,0 +1,38 @@
+/* 
+---------------------------------------------- HEADER
+*/
+
+header {
+    background-color: white;
+    background: rgba(255, 255, 255, 0.701);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    z-index: 99;
+}
+
+.mycontacts {
+    a {
+        text-decoration-style: dotted;
+    }
+}
+
+/* 
+---------------------------------------------- NAVIGATION
+*/
+
+nav {
+    border-radius: 1rem;
+    background-color: var(--dark-gray);
+    color: white;
+
+    a {
+        margin: 0 2rem;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            background-color: darkred;
+            color: white;
+        }
+    }
+}

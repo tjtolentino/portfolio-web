@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-web",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "scripts": {
+    "build:css": "sass --no-source-map scss/main.scss css/main.css",
+    "watch:css": "sass --watch --no-source-map scss/main.scss:css/main.css",
+    "validate:css": "bun scripts/validate.js"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "dependencies": {
+    "sass": "^1.104.0"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ]
+}

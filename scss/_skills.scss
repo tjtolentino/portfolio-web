@@ -1,0 +1,18 @@
+/* 
+---------------------------------------------- MAIN > SKILLS
+*/
+
+.skills-grid {
+    li {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        will-change: transform;
+        position: relative;
+        background-color: white;
+        color: black;
+        z-index: 80;
+
+        &:hover {
+            transform: translateY(-4px);
+        }
+    }
+}
