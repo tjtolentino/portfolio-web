@@ -1,18 +1,108 @@
+@use "sass:list";
+@use "sass:map";
+
 /* 
 ---------------------------------------------- MAIN > SKILLS
 */
 
-.skills-grid {
-    li {
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        will-change: transform;
-        position: relative;
-        background-color: white;
-        color: black;
-        z-index: 80;
+// Dynamic Word Cloud Presets
+$cloud-presets: (
+    (size: 1.25rem, weight: 500, color: #475569, m-size: 1.05rem),
+    (size: 1.85rem, weight: 700, color: #1e293b, m-size: 1.35rem),
+    (size: 2.25rem, weight: 800, color: #0f172a, m-size: 1.6rem),
+    (size: 1.35rem, weight: 600, color: #334155, m-size: 1.1rem),
+    (size: 2.05rem, weight: 800, color: #0f172a, m-size: 1.5rem),
+    (size: 1.7rem,  weight: 700, color: #1e293b, m-size: 1.35rem),
+    (size: 1.45rem, weight: 600, color: #334155, m-size: 1.15rem),
+    (size: 1.6rem,  weight: 600, color: #1e293b, m-size: 1.25rem),
+    (size: 1.15rem, weight: 500, color: #475569, m-size: 1rem),
+    (size: 1.5rem,  weight: 700, color: #1e293b, m-size: 1.2rem),
+    (size: 1.95rem, weight: 800, color: #0f172a, m-size: 1.45rem)
+);
 
-        &:hover {
-            transform: translateY(-4px);
+$preset-count: list.length($cloud-presets);
+
+.skills-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1rem 1.25rem !important;
+    max-width: 56rem !important;
+    margin: 0 auto !important;
+    padding: 1.5rem 0.5rem !important;
+    list-style: none !important;
+    line-height: normal !important;
+
+    li {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+        background-color: #ffffff !important;
+        border: 1.5px solid #e2e8f0 !important;
+        border-radius: 9999px !important;
+        padding: 0.55em 1.15em !important;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03) !important;
+        cursor: default;
+        position: relative;
+        z-index: 80;
+        transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+                    box-shadow 0.25s ease,
+                    border-color 0.25s ease,
+                    background-color 0.25s ease,
+                    color 0.25s ease !important;
+        will-change: transform;
+
+        // Dynamic Cyclical Presets: Any number of <li> items in HTML will automatically cycle
+        @for $i from 1 through $preset-count {
+            $preset: list.nth($cloud-presets, $i);
+            &:nth-child(#{$preset-count}n + #{$i}) {
+                font-size: map.get($preset, size) !important;
+                font-weight: map.get($preset, weight) !important;
+                color: map.get($preset, color) !important;
+            }
+        }
+
+        // Optional manual overrides if desired: <li data-size="sm|md|lg|xl">
+        &[data-size="sm"] { font-size: 1.15rem !important; font-weight: 500 !important; color: #475569 !important; }
+        &[data-size="md"] { font-size: 1.5rem !important;  font-weight: 600 !important; color: #334155 !important; }
+        &[data-size="lg"] { font-size: 1.85rem !important; font-weight: 700 !important; color: #1e293b !important; }
+        &[data-size="xl"] { font-size: 2.25rem !important; font-weight: 800 !important; color: #0f172a !important; }
+
+        // Interactive hover state with high specificity to override nth-child text colors
+        &:hover,
+        &:hover:nth-child(n) {
+            transform: translateY(-4px) scale(1.06) !important;
+            background-color: #0f172a !important;
+            color: #ffffff !important;
+            border-color: #0f172a !important;
+            box-shadow: 0 14px 28px -4px rgba(15, 23, 42, 0.2), 0 8px 12px -2px rgba(15, 23, 42, 0.12) !important;
+            z-index: 90;
+        }
+    }
+
+    @media (max-width: 640px) {
+        gap: 0.65rem 0.85rem !important;
+        padding: 0.75rem 0 !important;
+
+        li {
+            white-space: normal !important;
+            text-align: center !important;
+            padding: 0.4em 0.85em !important;
+            max-width: 100% !important;
+
+            @for $i from 1 through $preset-count {
+                $preset: list.nth($cloud-presets, $i);
+                &:nth-child(#{$preset-count}n + #{$i}) {
+                    font-size: map.get($preset, m-size) !important;
+                }
+            }
+
+            &[data-size="sm"] { font-size: 1rem !important; }
+            &[data-size="md"] { font-size: 1.2rem !important; }
+            &[data-size="lg"] { font-size: 1.35rem !important; }
+            &[data-size="xl"] { font-size: 1.6rem !important; }
         }
     }
 }

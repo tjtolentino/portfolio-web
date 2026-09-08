@@ -1,1 +1,376 @@
-*,*::before,*::after{box-sizing:border-box}html{-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;scroll-behavior:smooth;box-sizing:border-box;font-size:16px;overflow-x:clip}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin-block-end:0;overflow-x:clip}ul[role=list],ol[role=list]{list-style:none}body{min-height:100vh;line-height:1.5}h1,h2,h3,h4,button,input,label{line-height:1.1}h1,h2,h3,h4{text-wrap:balance}a:not([class]){text-decoration-skip-ink:auto;color:currentColor}img,picture{max-width:100%;display:block}input,button,textarea,select{font-family:inherit;font-size:inherit}textarea:not([rows]){min-height:10em}:target{scroll-margin-block:5ex}:root{--dark-gray: #050505de;--gray: oklch(60.179% 0.0215 262.987)}html{scroll-padding-top:7.5rem}body a{text-decoration:underline dashed}header{background-color:#fff;background:rgba(255,255,255,.701);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);z-index:99}.mycontacts a{text-decoration-style:dotted}nav{border-radius:1rem;background-color:var(--dark-gray);color:#fff}nav a{margin:0 2rem;text-decoration:none;color:#fff}nav a:hover{background-color:darkred;color:#fff}main section{display:grid;place-items:center;color:#fff}main section:nth-child(even){background-color:#fff}main section>div{display:block;position:relative;width:70rem;max-width:100%;margin-inline:auto}.section__header{font:bold small-caps 5rem Arial;color:#fff;background:rgba(0,0,0,0);position:relative;top:-1.8rem;left:1rem;z-index:20;width:fit-content}main section:nth-child(even) .section__header{color:var(--gray)}.section__content{display:block;position:relative;padding:1rem 5rem;border:0;background:rgba(0,0,0,0);line-height:2;top:-2rem}.section__bg{position:absolute;bottom:0;right:2rem;z-index:50;width:fit-content;font:300 8rem "Helvetica Neue",Arial,sans-serif;color:rgba(0,0,0,0);text-shadow:0 0 10px rgba(197,196,196,.301)}.skills-grid li{transition:transform .2s ease,box-shadow .2s ease;will-change:transform;position:relative;background-color:#fff;color:#000;z-index:80}.skills-grid li:hover{transform:translateY(-4px)}#contact form{display:block}#contact form *{width:100%}/*# sourceMappingURL=main.css.map */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  /* custom ozom css */
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 16px;
+  overflow-x: clip;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+  overflow-x: clip;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+:root {
+  --dark-gray: #050505de;
+  --gray: oklch(60.179% 0.0215 262.987);
+}
+
+html {
+  scroll-padding-top: 7.5rem;
+}
+
+body a {
+  text-decoration: underline dashed;
+}
+
+/* 
+---------------------------------------------- HEADER
+*/
+header {
+  background-color: white;
+  background: rgba(255, 255, 255, 0.701);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  z-index: 99;
+}
+
+.mycontacts a {
+  text-decoration-style: dotted;
+}
+
+/* 
+---------------------------------------------- NAVIGATION
+*/
+nav {
+  border-radius: 1rem;
+  background-color: var(--dark-gray);
+  color: white;
+}
+nav a {
+  margin: 0 2rem;
+  text-decoration: none;
+  color: white;
+}
+nav a:hover {
+  background-color: darkred;
+  color: white;
+}
+
+/* 
+---------------------------------------------- MAIN
+*/
+main section {
+  display: grid;
+  place-items: center;
+  color: white;
+}
+main section:nth-child(even) {
+  background-color: white;
+}
+main section > div {
+  display: block;
+  position: relative;
+  width: 70rem;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.section__header {
+  font: bold small-caps 5rem Arial;
+  color: white;
+  background: transparent;
+  position: relative;
+  top: -1.8rem;
+  left: 1rem;
+  z-index: 20;
+  width: fit-content;
+}
+main section:nth-child(even) .section__header {
+  color: var(--gray);
+}
+.section__content {
+  display: block;
+  position: relative;
+  padding: 3rem 5rem;
+  border: 0;
+  background: transparent;
+  line-height: 3;
+  top: -2rem;
+}
+.section__bg {
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+  z-index: 50;
+  width: fit-content;
+  font: 300 8rem "Helvetica Neue", Arial, sans-serif;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(197, 196, 196, 0.301);
+}
+
+/* 
+---------------------------------------------- MAIN > SKILLS
+*/
+.skills-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1rem 1.25rem !important;
+  max-width: 56rem !important;
+  margin: 0 auto !important;
+  padding: 1.5rem 0.5rem !important;
+  list-style: none !important;
+  line-height: normal !important;
+}
+.skills-grid li {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  background-color: #ffffff !important;
+  border: 1.5px solid #e2e8f0 !important;
+  border-radius: 9999px !important;
+  padding: 0.55em 1.15em !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03) !important;
+  cursor: default;
+  position: relative;
+  z-index: 80;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease !important;
+  will-change: transform;
+}
+.skills-grid li:nth-child(11n+1) {
+  font-size: 1.25rem !important;
+  font-weight: 500 !important;
+  color: #475569 !important;
+}
+.skills-grid li:nth-child(11n+2) {
+  font-size: 1.85rem !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
+}
+.skills-grid li:nth-child(11n+3) {
+  font-size: 2.25rem !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+}
+.skills-grid li:nth-child(11n+4) {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+}
+.skills-grid li:nth-child(11n+5) {
+  font-size: 2.05rem !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+}
+.skills-grid li:nth-child(11n+6) {
+  font-size: 1.7rem !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
+}
+.skills-grid li:nth-child(11n+7) {
+  font-size: 1.45rem !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+}
+.skills-grid li:nth-child(11n+8) {
+  font-size: 1.6rem !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+}
+.skills-grid li:nth-child(11n+9) {
+  font-size: 1.15rem !important;
+  font-weight: 500 !important;
+  color: #475569 !important;
+}
+.skills-grid li:nth-child(11n+10) {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
+}
+.skills-grid li:nth-child(11n+11) {
+  font-size: 1.95rem !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+}
+.skills-grid li[data-size=sm] {
+  font-size: 1.15rem !important;
+  font-weight: 500 !important;
+  color: #475569 !important;
+}
+.skills-grid li[data-size=md] {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+}
+.skills-grid li[data-size=lg] {
+  font-size: 1.85rem !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
+}
+.skills-grid li[data-size=xl] {
+  font-size: 2.25rem !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+}
+.skills-grid li:hover, .skills-grid li:hover:nth-child(n) {
+  transform: translateY(-4px) scale(1.06) !important;
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #0f172a !important;
+  box-shadow: 0 14px 28px -4px rgba(15, 23, 42, 0.2), 0 8px 12px -2px rgba(15, 23, 42, 0.12) !important;
+  z-index: 90;
+}
+@media (max-width: 640px) {
+  .skills-grid {
+    gap: 0.65rem 0.85rem !important;
+    padding: 0.75rem 0 !important;
+  }
+  .skills-grid li {
+    white-space: normal !important;
+    text-align: center !important;
+    padding: 0.4em 0.85em !important;
+    max-width: 100% !important;
+  }
+  .skills-grid li:nth-child(11n+1) {
+    font-size: 1.05rem !important;
+  }
+  .skills-grid li:nth-child(11n+2) {
+    font-size: 1.35rem !important;
+  }
+  .skills-grid li:nth-child(11n+3) {
+    font-size: 1.6rem !important;
+  }
+  .skills-grid li:nth-child(11n+4) {
+    font-size: 1.1rem !important;
+  }
+  .skills-grid li:nth-child(11n+5) {
+    font-size: 1.5rem !important;
+  }
+  .skills-grid li:nth-child(11n+6) {
+    font-size: 1.35rem !important;
+  }
+  .skills-grid li:nth-child(11n+7) {
+    font-size: 1.15rem !important;
+  }
+  .skills-grid li:nth-child(11n+8) {
+    font-size: 1.25rem !important;
+  }
+  .skills-grid li:nth-child(11n+9) {
+    font-size: 1rem !important;
+  }
+  .skills-grid li:nth-child(11n+10) {
+    font-size: 1.2rem !important;
+  }
+  .skills-grid li:nth-child(11n+11) {
+    font-size: 1.45rem !important;
+  }
+  .skills-grid li[data-size=sm] {
+    font-size: 1rem !important;
+  }
+  .skills-grid li[data-size=md] {
+    font-size: 1.2rem !important;
+  }
+  .skills-grid li[data-size=lg] {
+    font-size: 1.35rem !important;
+  }
+  .skills-grid li[data-size=xl] {
+    font-size: 1.6rem !important;
+  }
+}
+
+/* 
+---------------------------------------------- MAIN > CONTACTS
+*/
+#contact form {
+  display: block;
+}
+#contact form * {
+  width: 100%;
+}

@@ -11,7 +11,7 @@ main section {
         background-color: white;
     }
 
-    > div {
+    >div {
         display: block;
         position: relative;
         width: 70rem;
@@ -39,10 +39,10 @@ main section {
     &__content {
         display: block;
         position: relative;
-        padding: 1rem 5rem;
+        padding: 3rem 5rem;
         border: 0;
         background: transparent;
-        line-height: 2;
+        line-height: 3;
         top: -2rem;
     }
 
