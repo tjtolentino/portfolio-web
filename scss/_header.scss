@@ -22,16 +22,20 @@ header {
 
 nav {
     border-radius: 1rem;
-    background-color: var(--dark-gray);
+    background-color: var(--gray);
     color: white;
 
     a {
         margin: 0 2rem;
         text-decoration: none;
         color: white;
+        padding: 0 1rem;
+        font-weight: 300;
 
         &:hover {
-            background-color: darkred;
+            border-radius: 1rem;
+            background-color: var(--dark-gray);
+            // font-weight: 500;
             color: white;
         }
     }

@@ -9,5 +9,14 @@
         * {
             width: 100%;
         }
+
+        button {
+            background-color: var(--gray);
+            cursor: hand;
+        }
+
+        button:hover {
+            background-color: var(--dark-gray);
+        }
     }
 }

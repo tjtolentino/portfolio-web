@@ -30,6 +30,7 @@ main section {
         left: 1rem;
         z-index: 20;
         width: fit-content;
+        font-weight: 600;
 
         main section:nth-child(even) & {
             color: var(--gray);
