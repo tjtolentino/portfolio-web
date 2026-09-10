@@ -1,10 +1,13 @@
-:root {
-    --dark-gray: #0f172a;
-    --gray: oklch(60.179% 0.0215 262.987);
-}
+$clr-darkbluegray: #0f172a;
+$clr-lightgray: oklch(60.179% 0.0215 262.987);
+$font: "Helvetica Neue";
 
 html {
     scroll-padding-top: 7.5rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 16px;
+    overflow-x: clip;
 }
 
 body {

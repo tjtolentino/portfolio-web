@@ -11,11 +11,6 @@ html {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
 
-    /* custom ozom css */
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    font-size: 16px;
-    overflow-x: clip;
 }
 
 /* Remove default margin in favour of better control in authored CSS */

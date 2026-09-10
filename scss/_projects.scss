@@ -2,6 +2,32 @@
 // MAIN > PROJECTS
 // ----------------------------------------------
 
+@use "base" as *;
+
 #projects {
+
     // Specific styles for #projects section
+    .project-card {
+        position: relative;
+        display: block;
+        border: 3px solid darkgray;
+        width: 12em;
+        z-index: 80;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.162);
+    }
+
+    .project {
+        &__title {
+            display: inline-block;
+            text-align: center;
+            padding: 0 3em;
+            background-color: $clr-darkbluegray;
+            color: white;
+            width: 100%;
+        }
+
+        &__image {}
+    }
 }

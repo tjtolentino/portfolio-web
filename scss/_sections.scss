@@ -1,6 +1,7 @@
 /* 
----------------------------------------------- MAIN
+--------------------------------------------- MAIN
 */
+@use "base" as *;
 
 main section {
     display: grid;
@@ -33,7 +34,7 @@ main section {
         font-weight: 600;
 
         main section:nth-child(even) & {
-            color: var(--gray);
+            color: $clr-lightgray;
         }
     }
 
@@ -51,9 +52,9 @@ main section {
         position: absolute;
         bottom: 0;
         right: 2rem;
-        z-index: 50;
+        z-index: 10;
         width: fit-content;
-        font: 300 8rem "Helvetica Neue", Arial, sans-serif;
+        font: 300 8rem $font, Arial, sans-serif;
         color: transparent;
         text-shadow: 0 0 10px rgba(197, 196, 196, 0.301);
     }

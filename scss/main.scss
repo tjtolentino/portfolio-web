@@ -2,11 +2,12 @@
 // MAIN STYLESHEET
 // ==============================================
 
-// Base & Global styles
+// 
 // Thristan Jericho Tolentino
 //
+
 @use "reset";
-@use "base";
+@use "base" as *;
 
 // Header element & Navigation
 @use "header";

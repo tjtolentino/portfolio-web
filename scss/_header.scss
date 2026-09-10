@@ -1,6 +1,7 @@
 /* 
 ---------------------------------------------- HEADER
 */
+@use "base" as *;
 
 header {
     background-color: white;
@@ -22,7 +23,7 @@ header {
 
 nav {
     border-radius: 1rem;
-    background-color: var(--gray);
+    background-color: $clr-lightgray;
     color: white;
 
     a {
@@ -34,7 +35,7 @@ nav {
 
         &:hover {
             border-radius: 1rem;
-            background-color: var(--dark-gray);
+            background-color: $clr-darkbluegray;
             // font-weight: 500;
             color: white;
         }

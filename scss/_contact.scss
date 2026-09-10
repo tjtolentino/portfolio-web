@@ -1,6 +1,7 @@
 /* 
 ---------------------------------------------- MAIN > CONTACTS
 */
+@use "base" as *;
 
 #contact {
     form {
@@ -11,12 +12,12 @@
         }
 
         button {
-            background-color: var(--gray);
+            background-color: $clr-lightgray;
             cursor: hand;
         }
 
         button:hover {
-            background-color: var(--dark-gray);
+            background-color: $clr-darkbluegray;
         }
     }
 }
